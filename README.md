@@ -1,5 +1,5 @@
 ===============================
-OBJECT POSE ESTIMATION LIBRARY
+    OBJECT POSE ESTIMATION
 ===============================
 
 Author: Kester Duncan
