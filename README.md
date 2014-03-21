@@ -1,8 +1,6 @@
-
-    OBJECT POSE ESTIMATION
-===============================
-
-Author: Kester Duncan
+Object Pose Estimation
+======================
+Kester Duncan
 
 Version: 0.3
 
