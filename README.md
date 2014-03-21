@@ -1,14 +1,19 @@
 ===============================
 OBJECT POSE ESTIMATION LIBRARY
 ===============================
+
 Author: Kester Duncan
+
 Version: 0.3
 
+
+SYNOPSIS
+========
 
 Estimates the position and orientation of an object represented as a 3D point cloud using superquadrics. 
 This is the implementation of the algorithm detailed in the ICRA 2013 submission by K. Duncan et al. entitled 
 "Multi-scale Superquadric Fitting for Efficient Shape and Pose Recovery of Unknown Objects." The article in question 
-can be found here --> http://www.cse.usf.edu/~kkduncan/research/DuncanICRA2013.pdf
+can be found here: http://www.cse.usf.edu/~kkduncan/research/DuncanICRA2013.pdf
 
 
 USAGE
@@ -42,6 +47,7 @@ See OPEMain.cpp for a demonstration of how to use this code. There are two main 
         
 Ensure that the ObjectPoseEstimation.lib is available for linking and the ObjectPoseEstimation is
 available for the created executable to access.
+
         
 NOTE
 ====
