@@ -15,6 +15,7 @@ USAGE
 =====
 
 See OPEMain.cpp for a demonstration of how to use this code. There are two main functions to use:
+  
   o calculateObjectPose(pcl::PointCloud<pcl::PointXYZRGB>& selectedObjectPtCloud)
     - Found in ObjectPoseEstimator.h. This function is responsible for calculating the pose
       of a segmented object represented by the PCL point cloud provided. This function assumes that
@@ -23,10 +24,12 @@ See OPEMain.cpp for a demonstration of how to use this code. There are two main 
       which possesses the position and orientation of the object. See the comments in SQTypes.h
       for an explanation.
       
+  
   o run()
     - Also found ObjectPoseEstimator.h. This function assumes that there is a connected Kinect that
       faces a table-top of objects within viewing range and that the OpenNI drivers are installed. It 
       executes as follows: 
+      
         1) Capture a point cloud from the Kinect.
         2) Extract the table-top objects from the captured point cloud.
         3) Present a viewing window to the user in order for them to see the index of the object they
