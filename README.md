@@ -16,7 +16,7 @@ USAGE
 
 See OPEMain.cpp for a demonstration of how to use this code. There are two main functions to use:
   
-  a) calculateObjectPose(pcl::PointCloud<pcl::PointXYZRGB>& selectedObjectPtCloud)
+  a) calculateObjectPose(pcl::PointCloud\<pcl::PointXYZRGB\>& selectedObjectPtCloud)
   
     - Found in ObjectPoseEstimator.h. This function is responsible for calculating the pose
       of a segmented object represented by the PCL point cloud provided. This function assumes that
