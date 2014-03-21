@@ -1,8 +1,8 @@
-================================================================
+===============================
 OBJECT POSE ESTIMATION LIBRARY
-K. Duncan
-v 0.3
-================================================================
+===============================
+Author: Kester Duncan
+Version: 0.3
 
 
 Estimates the position and orientation of an object represented as a 3D point cloud using superquadrics. 
