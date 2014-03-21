@@ -1,17 +1,48 @@
 ================================================================
-OBJECT POSE ESTIMATION
+OBJECT POSE ESTIMATION LIBRARY
 K. Duncan
-v 0.1
+v 0.3
 ================================================================
 
---------------------
-TO USE
---------------------
-o In Visual Studio, under the Property Pages, simply change the 
-  $(ProjectDir) macro variable to the directory of your project 
-  for "Additional Include Directories" and "Additional Library 
-  Directories" under C/C++/General and Linker/General
-  respectively.
-  
-  
-If you have any issues, please email me at kkduncan@cse.usf.edu
+
+Estimates the position and orientation of an object represented as a 3D point cloud using superquadrics. 
+This is the implementation of the algorithm detailed in the ICRA 2013 submission by K. Duncan et al. entitled 
+"Multi-scale Superquadric Fitting for Efficient Shape and Pose Recovery of Unknown Objects." The article in question 
+can be found here --> http://www.cse.usf.edu/~kkduncan/research/DuncanICRA2013.pdf
+
+
+USAGE
+=====
+
+See OPEMain.cpp for a demonstration of how to use this code. There are two main functions to use:
+  o calculateObjectPose(pcl::PointCloud<pcl::PointXYZRGB>& selectedObjectPtCloud)
+    - Found in ObjectPoseEstimator.h. This function is responsible for calculating the pose
+      of a segmented object represented by the PCL point cloud provided. This function assumes that
+      the cloud follows the Kinect optical frame. This is then transformed into world coordinates
+      before superquadric processing. The function returns an instance of the SQParameters class
+      which possesses the position and orientation of the object. See the comments in SQTypes.h
+      for an explanation.
+      
+  o run()
+    - Also found ObjectPoseEstimator.h. This function assumes that there is a connected Kinect that
+      faces a table-top of objects within viewing range and that the OpenNI drivers are installed. It 
+      executes as follows: 
+        1) Capture a point cloud from the Kinect.
+        2) Extract the table-top objects from the captured point cloud.
+        3) Present a viewing window to the user in order for them to see the index of the object they
+           intend to choose.
+        4) Asks the user for the index of the object they wish to choose.
+        5) Performs pose estimation on the object point cloud the user indicated.
+        6) Return the SQParameters instance.
+        
+Ensure that the ObjectPoseEstimation.lib is available for linking and the ObjectPoseEstimation is
+available for the created executable to access.
+        
+NOTE
+====
+
+Regular updates to this library would be carried out in the upcoming weeks, so please keep an eye out. There
+may be a few bugs in this code as error conditions are not handled as yet. Therefore use at your own
+risk. This code is intended for use with Visual Studio 2010 and later. 
+For any questions or comments, please contact kkduncan@cse.usf.edu
+        
