@@ -26,7 +26,7 @@ Thumbs.db
 *.sbr
 obj/
 ipch/
-#[Rr]elease*/
+[Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
 TestOPE.sdf
